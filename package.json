@@ -1,0 +1,24 @@
+{
+  "name": "sha-gallery",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxtjs/svg-sprite": "^1.0.2",
+    "normalize.css": "^8.0.1",
+    "nuxt": "^3.13.0",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610",
+  "devDependencies": {
+    "@vueuse/nuxt": "^11.1.0",
+    "sass": "^1.79.4"
+  }
+}

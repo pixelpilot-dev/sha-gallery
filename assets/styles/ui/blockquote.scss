@@ -1,0 +1,42 @@
+@mixin custom-blockquote {
+  --blq-line-color: #{$primary};
+
+  @extend %subtitle1;
+
+  border-left: rem(3) solid var(--blq-line-color);
+  margin: rem(30) 0;
+  padding: rem(5) 0 rem(5) rem(29);
+
+  @media #{$tablet} {
+    margin: rem(40) 0;
+    padding: rem(20) 0 rem(20) rem(21);
+  }
+
+  @media #{$desktop} {
+    padding-left: rem(37);
+  }
+
+  cite {
+    @extend %p1;
+
+    display: block;
+    text-align: right;
+    font-style: normal;
+    margin-top: rem(12);
+
+    @media #{$tablet} {
+      margin-top: rem(20);
+    }
+
+    @media #{$desktop} {
+      margin-top: 0;
+    }
+
+    span {
+      @extend %p3;
+
+      display: block;
+      margin-top: rem(4);
+    }
+  }
+}

@@ -1,0 +1,18 @@
+$aside-padding: rem(100);
+$aside-padding-mobile: rem(16);
+
+// Wrapper
+%container {
+  width: 100%;
+  max-width: 1024px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: $aside-padding-mobile;
+  padding-right: $aside-padding-mobile;
+
+  @media #{$desktop} {
+    max-width: 1920px;
+    padding-left: $aside-padding;
+    padding-right: $aside-padding;
+  }
+}

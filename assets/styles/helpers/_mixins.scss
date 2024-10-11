@@ -1,0 +1,64 @@
+// Mixins
+
+@mixin resetul {
+  list-style-type: none;
+  font-weight: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin resetli {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &::before {
+    content: normal;
+  }
+}
+
+@mixin resetbtn {
+  margin: 0;
+  border: none;
+  outline: none;
+  padding: 0;
+  box-shadow: none;
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@mixin resetinput {
+  margin: 0;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  outline: none;
+  background: transparent;
+  text-decoration: none;
+}
+
+@mixin reseta {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  &:active,
+  &:hover {
+    outline: 0;
+    text-decoration: none;
+  }
+}
+
+@mixin reseth {
+  margin: 0;
+  text-align: left;
+}
+
+@mixin resetp {
+  margin: 0;
+}
+

@@ -1,0 +1,62 @@
+.page-enter-active,
+.page-leave-active {
+    transition: opacity .5s;
+}
+
+.page-enter-from,
+.page-leave-to {
+    opacity: 0;
+}
+
+// fade
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .4s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.fade-fast-enter-active,
+.fade-fast-leave-active {
+  transition: opacity .2s;
+}
+
+.fade-fast-enter-from,
+.fade-fast-leave-active {
+  opacity: 0;
+}
+
+// Scroll left
+.scroll-left-enter-active,
+.scroll-left-leave-active {
+  transition: all .4s;
+}
+
+.scroll-left-enter-from {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.scroll-left-leave-to {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+// Scroll right
+.scroll-right-enter-active,
+.scroll-right-leave-active {
+  transition: all .4s;
+}
+
+.scroll-right-enter-from {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.scroll-right-leave-to {
+  opacity: 0;
+  transform: translateX(50px);
+}

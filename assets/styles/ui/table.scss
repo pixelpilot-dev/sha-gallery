@@ -1,0 +1,83 @@
+@mixin custom-table() {
+  --t-head-background-color: #{$light-gray};
+  --t-border-color: #{$light-gray};
+  --t-column-padding: #{rem(12)};
+
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  border-radius: rem(8);
+  box-shadow: 0 rem(10) rem(20) 0 rgb(18, 38, 63, 0.03);
+  overflow: hidden;
+
+  @media #{$tablet} {
+    --t-column-padding: #{rem(12) rem(8)};
+  }
+
+  thead {
+    background-color: var(--t-head-background-color);
+  }
+
+  tr {
+    border-bottom: rem(1) solid var(--t-border-color);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  th, td {
+    padding: var(--t-column-padding);
+  }
+
+  th {
+    @extend %button2;
+  }
+
+  td {
+    @extend %p3;
+  }
+}
+
+@mixin table-with-content() {
+  h2 {
+    @extend %h5;
+
+    margin-top: rem(48);
+    margin-bottom: rem(4);
+
+    @media #{$desktop} {
+      margin-top: rem(64);
+    }
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: rem(24);
+    text-align: left;
+    color: $gray;
+
+    @media #{$tablet} {
+      margin-bottom: rem(40);
+    }
+
+    @media #{$desktop} {
+      margin-bottom: rem(32);
+    }
+  }
+}
+
+@mixin table-scrollable() {
+  @include scrollbar;
+
+  padding-bottom: rem(15);
+  overflow-x: auto;
+
+  @media #{$tablet} {
+    padding-bottom: 0;
+  }
+
+  table {
+    min-width: rem(800);
+  }
+}

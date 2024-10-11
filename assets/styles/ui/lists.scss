@@ -1,0 +1,81 @@
+@mixin custom-ul {
+  --ul-margin: #{rem(16) 0};
+  --ul-item-margin: #{rem(16)};
+  --ul-dot-color: #{$primary};
+  --ul-text-color: #{$dark};
+
+  list-style-type: none;
+  padding: 0;
+  margin: var(--ul-margin);
+  color: var(--ul-text-color);
+
+  @media #{$tablet} {
+    --ul-margin: #{rem(24) 0};
+    --ul-item-margin: #{rem(24)};
+  }
+
+  li {
+    position: relative;
+    margin-top: var(--ul-item-margin);
+    margin-bottom: var(--ul-item-margin);
+    padding-left: rem(24);
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: rem(8);
+      left: 0;
+      width: rem(8);
+      height: rem(8);
+      border-radius: 50%;
+      background-color: var(--ul-dot-color);
+    }
+  }
+}
+
+@mixin list-by-table {
+  @media #{$tablet} {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: rem(16);
+    column-gap: rem(20);
+  }
+
+  @media #{$desktop} {
+    row-gap: rem(24);
+    column-gap: rem(24);
+  }
+
+  li {
+    @media #{$tablet} {
+      flex-shrink: 0;
+      flex-basis: calc(50% - #{rem(10)});
+      margin: 0;
+    }
+
+    @media #{$desktop} {
+      flex-basis: calc(33.33% - #{rem(16)});
+    }
+  }
+}
+
+@mixin info-ul {
+  @include custom-ul;
+
+  --ul-margin: 0;
+  --ul-dot-color: #{$gray};
+  --ul-text-color: #{$gray};
+
+  @media #{$tablet} {
+    --ul-margin: 0;
+  }
+}
